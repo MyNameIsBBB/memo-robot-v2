@@ -3,7 +3,7 @@ import aiohttp
 import time
 from config import (
     SERVER_URL, FPS_LIMIT, 
-    SERIAL_PORT_NAME, BAUD_RATE,
+    SERIAL_PORTS, BAUD_RATE,
     CAMERA_INDEX, FRAME_WIDTH, FRAME_HEIGHT, JPEG_QUALITY
 )
 from services.serial_manager import SerialManager
@@ -16,7 +16,7 @@ class RobotClient:
         self.running = True
         
         # Initialize Managers with Config
-        self.serial_manager = SerialManager(port=SERIAL_PORT_NAME, baud_rate=BAUD_RATE)
+        self.serial_manager = SerialManager(port=SERIAL_PORTS, baud_rate=BAUD_RATE)
         
         self.camera_manager = CameraManager(
             camera_index=CAMERA_INDEX,

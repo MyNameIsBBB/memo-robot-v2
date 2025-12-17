@@ -4,7 +4,7 @@ SERVER_PORT = 8765
 SERVER_URL = f"ws://{SERVER_IP}:{SERVER_PORT}/ws?role=pi"
 
 # Serial Config
-SERIAL_PORT_NAME = '/dev/ttyACM0' # Check your port!
+SERIAL_PORTS = ['/dev/ttyACM0', '/dev/ttyUSB0', '/dev/ttyUSB1'] # Try ports in order
 BAUD_RATE = 9600
 
 # Camera Config
